@@ -11,6 +11,7 @@ import GetApp from "../../components/get-app";
 import NewsAndInsights from "../../components/news-insights";
 import AchievementsSection from "../../components/achievements-section";
 import BecomePartner from "../../components/become-partner";
+import ExcelReader from "../../components/excel-reader";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <BookYourTaxiRide />
       </div>
       <AchievementsSection />
+      <ExcelReader />
       <WhatWeOffer />
       <CallUsNow />
       <Testimonials />

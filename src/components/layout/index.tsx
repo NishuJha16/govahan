@@ -11,12 +11,18 @@ const Layout = ({ children }: any) => {
   const [isVisible, setIsvisible] = useState<boolean>(false);
   const { pathname } = useLocation();
 
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 100 ? setIsvisible(true) : setIsvisible(false);
     });
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
     return () => {
       window.removeEventListener("scroll", () => {});
+      window.removeEventListener("resize", () => {});
     };
   }, []);
 
@@ -26,9 +32,7 @@ const Layout = ({ children }: any) => {
       id="hello"
       className="flex flex-col h-full bg-white overflow-y-overlay overflow-x-hidden ::webkit-scrollbar-hidden"
     >
-      {!isVisible &&
-      window.innerWidth > 800 &&
-      ["/", "/home"].includes(pathname) ? (
+      {!isVisible && windowWidth > 900 && ["/", "/home"].includes(pathname) ? (
         <HeaderLarge />
       ) : (
         <Header />

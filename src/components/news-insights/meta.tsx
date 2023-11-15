@@ -12,7 +12,8 @@ export const newsData = [
       "Financial experts support or help you to find out which way you can raise your funds more...",
     completeDescription:
       "Financial experts support or help you to find out which way you can raise your funds more Financial experts support or help you to find out which way you can raise your funds more Financial experts support or help you to find out which way you can raise your funds more ",
-    image: NewsImage1,
+    image:
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F580682945673651160%2F&psig=AOvVaw03bZjPM0z9NnvMKzduk106&ust=1700108260357000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJCrwvmSxYIDFQAAAAAdAAAAABAE",
   },
   {
     type: "Finance",
